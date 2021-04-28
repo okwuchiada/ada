@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Ubuntu', serif;
+}
+
+header {
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 40, 0.7)), url('unsplash-5.jpg');
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    color: #eee;
+}
+
+#header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 6%;
+}
+
+.logo {
+    width: 70px;
+    height: 70px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #eee;
+    font-size: 13px;
+}
+
+.nav-links li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #030324;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-links li:hover::after {
+    width: 100%;
+    cursor: pointer;
+}
+
+.hero-background {
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.hero-background button {
+    padding: 10px 20px;
+    margin: 10px 0 10px;
+    color: #eee;
+    background-color: transparent;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hero-background button:hover {
+    border: 1px solid #eee;
+    background-color: #030324;
+    transition: 1s;
+}
+
+.hero-background h3 {
+    font-size: 50px;
+}
+
+.hero-background p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+}
+
+.collections {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.collections h2 {
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.collections a {
+    text-decoration: none;
+    color: #777;
+}
+
+.collections h3 {
+    font-size: 25px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.collections p {
+    color: #777;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.cols {
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.journal img {
+    width: 100%;
+}
+
+.journal {
+    flex-basis: 30%;
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+
+.collections a {
+    border: 2px solid #030324;
+    padding: 5px 20px;
+    border-radius: 7px;
+    background: #030324;
+    color: #eee;
+}
+
+.collections a:hover {
+    background: transparent;
+    color: #030324;
+}
+
+.layer {
+    position: absolute;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition: 1s;
+}
+
+.layer:hover {
+    background: #03032486;
+    color: #eee;
+}
+
+.layer h3 {
+    padding: 10px;
+}
+
+.layer p {
+    color: #eee;
+}
+
+footer {
+    width: 100%;
+    min-height: 70%;
+    margin-top: 50px;
+    background: #030324c7;
+    color: #eee;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#inter h3 {
+    font-size: 20px;
+}
+
+#inter p {
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#inter {
+    width: 60%;
+}
+
+#form {
+    width: 30%;
+}
+
+input {
+    padding: 10px;
+    border-radius: 7px;
+    border: none;
+}
+
+input[type="text"] {
+    width: 70%;
+}
+
+input[type="submit"] {
+    box-shadow: 0 0 10px 0 #555;
+}
+
+#pg- {
+    background: #777;
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/*
+
+@media (max-width: 700px) {
+    .hero-background h3 {
+        font-size: 20px;
+    }
+    .nav-links li {
+        display: block;
+    }
+    .nav-links {
+        position: absolute;
+        background: #030324;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: 0;
+        text-align: left;
+        z-index: 2;
+    }
+}
+*/
