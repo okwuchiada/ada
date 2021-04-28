@@ -236,6 +236,18 @@ input[type="submit"] {
     text-align: center;
 }
 
+@media (max-width: 700px) {
+    .cols {
+        flex-direction: column;
+    }
+    .footer-top {
+        flex-direction: column;
+    }
+    header {
+        font-size: smaller;
+    }
+}
+
 
 /*
 
