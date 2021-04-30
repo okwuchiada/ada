@@ -13,11 +13,11 @@ body {
 header {
     min-height: 100vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 40, 0.7)), url('unsplash-5.jpg');
+    background-image: linear-gradient(#04091eb3, #040928b3), url('unsplash-5.jpg');
     background-position: center;
     background-size: cover;
     position: relative;
-    color: #eee;
+    color: rgb(238, 238, 238);
 }
 
 #header-nav {
@@ -37,10 +37,10 @@ header {
     text-align: right;
 }
 
-.nav-links li {
+.nav-links ul li {
     list-style: none;
     display: inline-block;
-    padding: 8px 12px;
+    padding: 10px 14px;
     position: relative;
     text-transform: uppercase;
 }
@@ -51,19 +51,23 @@ header {
     font-size: 13px;
 }
 
-.nav-links li::after {
+.nav-links ul li::after {
     content: '';
     width: 0%;
     height: 2px;
-    background: #030324;
+    background: #eee;
     display: block;
     margin: auto;
     transition: 0.5s;
 }
 
-.nav-links li:hover::after {
+.nav-links ul li:hover::after {
     width: 100%;
     cursor: pointer;
+}
+
+nav .fas {
+    display: none;
 }
 
 .hero-background {
@@ -97,7 +101,7 @@ header {
 
 .hero-background p {
     margin: 10px 0 40px;
-    font-size: 14px;
+    font-size: 20px;
 }
 
 .collections {
@@ -148,10 +152,10 @@ header {
 }
 
 .collections a {
-    border: 2px solid #030324;
+    border: 2px solid #555;
     padding: 5px 20px;
     border-radius: 7px;
-    background: #030324;
+    background: #03032486;
     color: #eee;
 }
 
@@ -187,14 +191,16 @@ footer {
     width: 100%;
     min-height: 70%;
     margin-top: 50px;
-    background: #030324c7;
+    height: auto;
     color: #eee;
+    background: #030324c7;
 }
 
 .footer-top {
     display: flex;
     justify-content: space-between;
     padding: 20px;
+    margin: 10px;
 }
 
 #inter h3 {
@@ -218,6 +224,7 @@ input {
     padding: 10px;
     border-radius: 7px;
     border: none;
+    margin: 5px;
 }
 
 input[type="text"] {
@@ -228,15 +235,7 @@ input[type="submit"] {
     box-shadow: 0 0 10px 0 #555;
 }
 
-#pg- {
-    background: #777;
-    width: 100%;
-    margin-top: 10px;
-    padding: 10px;
-    text-align: center;
-}
-
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .cols {
         flex-direction: column;
     }
@@ -246,27 +245,46 @@ input[type="submit"] {
     header {
         font-size: smaller;
     }
-}
-
-
-/*
-
-@media (max-width: 700px) {
-    .hero-background h3 {
-        font-size: 20px;
-    }
-    .nav-links li {
-        display: block;
+    .logo {
+        width: 40px;
+        height: 40px;
     }
     .nav-links {
         position: absolute;
-        background: #030324;
+        background: #030324b9;
+        padding-top: 20px;
         height: 100vh;
         width: 200px;
         top: 0;
-        right: 0;
-        text-align: left;
-        z-index: 2;
+        right: -300px;
+        text-align: right;
+        z-index: 3;
+        transition: 0.7s;
+    }
+    .nav-links ul li {
+        display: block;
+    }
+    .hero-background h3 {
+        font-size: 20px;
+    }
+    nav .fas {
+        display: block;
+        margin: 20px;
+        cursor: pointer;
+        font-size: 24px;
+    }
+    .nav-links ul {
+        padding: 26px;
+    }
+    .footer-top {
+        flex-direction: column;
+        font-size: smaller;
+    }
+    #inter {
+        width: 100%;
+    }
+    #form {
+        margin-top: 5px;
+        width: 100%;
     }
 }
-*/
